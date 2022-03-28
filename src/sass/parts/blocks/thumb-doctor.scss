@@ -1,0 +1,38 @@
+
+.thumb-doctor {
+
+    .inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 567px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,.05);
+    }
+
+    .top {
+        flex-basis: 100%;
+        padding: 30px;
+    }
+    .bottom {
+        flex: 0 0 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color3;
+    }
+
+    .image {
+        height: 270px;
+        background-size: cover;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .lpus {
+        max-height: 55px;
+        overflow: hidden;
+    }
+
+}

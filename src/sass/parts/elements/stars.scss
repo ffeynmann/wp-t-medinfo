@@ -1,0 +1,63 @@
+
+.stars {
+    display: inline-flex;
+
+    .star {
+        position: relative;
+
+        & + .star {
+            margin-left: 4px;
+        }
+    }
+
+    &.input .star {
+        @extend .pointer;
+    }
+
+    &.md {
+        .star {
+            width: 20px;
+            height: 20px;
+
+            .level-1, .level-2 {
+                background-size: 20px 20px;
+            }
+        }
+    }
+
+    &.lg {
+        .star {
+            width: 40px;
+            height: 40px;
+
+            .level-1, .level-2 {
+                background-size: 40px 40px;
+            }
+        }
+    }
+
+    .level-1, .level-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    &[level="0"] {
+        .level-1 {
+            background-image: url('../images/icons/icon-star.svg');
+        }
+    }
+
+    .level-1 {
+        width: 100%;
+        background-image: url('../images/icons/icon-star-0.svg');
+        z-index: 1;
+    }
+
+    .level-2 {
+        width: 0;
+        background-image: url('../images/icons/icon-star-1.svg');
+        z-index: 2
+    }
+}

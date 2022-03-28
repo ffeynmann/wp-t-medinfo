@@ -1,0 +1,31 @@
+body {
+    //background-color: red;
+}
+
+$color1: #FF7D39; //main
+$color2: #898B8F; //medium gray
+$widthMobile: 1000px;
+
+.button {
+
+}
+
+.d-none {
+	display: none;
+}
+
+.d-block {
+	display: block
+}
+
+.comment-publish-wrapper {
+	.inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+[disabled="disabled"] {
+	pointer-events: none;
+}

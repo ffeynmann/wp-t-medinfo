@@ -1,0 +1,49 @@
+
+
+.comment {
+
+    .comment-top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 15px 15px 60px;
+        background-image:url('../images/comment-top-left.png');
+        background-position: bottom left;
+        background-size: 44px 31px;
+        background-repeat: no-repeat;
+    }
+
+    .comment-content {
+        padding: 40px;
+        background-color: $color3;
+        border: 0 8px 8px 8px;
+    }
+
+    .comment-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sub {
+        padding-left: 40px;
+    }
+
+    .like, .dislike {
+        @extend .pointer;
+    }
+
+    .like.active {
+        @extend .font-color-green;
+    }
+
+    .dislike.active {
+        @extend .font-color-red;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .comment-content {
+            padding: 20px;
+        }
+    }
+}

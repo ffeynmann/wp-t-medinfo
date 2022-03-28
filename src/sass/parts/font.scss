@@ -1,0 +1,124 @@
+.size-h0 {
+    font-size: 55px;
+    line-height: 60px;
+}
+
+.size-h1 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 300;
+
+    @media all and (max-width: $widthMobile) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+.size-h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+
+    @media all and (max-width: $widthMobile) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.size-h3 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.size-h4 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.size-h5 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.size-btn {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.size-base {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.size-sm {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+.stattya {
+    h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h4 {
+        margin-bottom: 1em;
+    }
+}
+
+h1 {
+    @extend .size-h1;
+}
+
+h3 {
+    @extend .size-h3;
+}
+
+h5 {
+    @extend .size-h5;
+}
+
+.font-color-1 {
+    color: $color1;
+}
+
+.font-color-2 {
+    color: $color2;
+}
+
+.font-color-red {
+    color: red;
+}
+
+.font-color-green {
+    color: #0ccA36;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-underline {
+    text-decoration: underline;
+}

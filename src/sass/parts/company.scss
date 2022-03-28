@@ -1,0 +1,91 @@
+
+
+.company {
+    > div > .top {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        h1 {
+            display: inline-block;
+        }
+
+        @media all and (max-width: $widthMobile) {
+            flex-wrap: wrap;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        > *  {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .stars-wrapper {
+        display: flex;
+        align-items: center;
+        @extend .font-color-2;
+    }
+
+    .m564 {
+        height: 20px;
+    }
+
+    .middle {
+        display: flex;
+
+        .left {
+            flex: 0 0 400px;
+            margin-right: 20px;
+        }
+
+        .right {
+            flex-basis: 100%;
+        }
+    }
+
+    .image {
+        max-width: 280px;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 265px;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .badge-wrapper {
+            margin-top: 10px;
+        }
+
+        .stars-wrapper {
+            margin-top: 10px;
+        }
+
+
+        .middle {
+            flex-wrap: wrap;
+
+            .left {
+                flex: 5 5 100%;
+                margin-right: 0;
+            }
+
+            .right {
+                margin-top: 15px;
+            }
+        }
+
+
+        .image-wrapper {
+            text-align: center;
+        }
+    }
+}
+
+.stars-review-wrapper {
+    display: flex;
+    align-items: center;
+}

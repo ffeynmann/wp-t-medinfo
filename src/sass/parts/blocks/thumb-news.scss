@@ -1,0 +1,71 @@
+
+.thumb-news {
+    .inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        //height: 420px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .image {
+        position: relative;
+        background-size: cover;
+        flex: 0 0 240px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 100%;
+        background-color: $color3;
+        padding: 20px;
+    }
+
+    .fire {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    .date-views {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $color2;
+
+        @extend .size-sm;
+
+        > * {
+            white-space: nowrap;
+
+            & + * {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .tags {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .title {
+        flex: 0 0 109px;
+        overflow: hidden;
+
+        @extend .size-h3;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .title {
+            flex: 0 0 66px;
+        }
+    }
+
+}

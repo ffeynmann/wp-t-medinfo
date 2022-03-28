@@ -1,0 +1,42 @@
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $color3;
+    color: $color2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @extend .size-sm;
+
+    > * {
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+
+
+    @media all and (max-width: $widthMobileMenu) {
+        [class^=text] {
+            flex-basis: 100%;
+        }
+
+        .text-1 {
+            order: 4;
+        }
+
+        .text-2 {
+            order: 5;
+        }
+
+        .text-3 {
+            order: 3;
+        }
+
+        .text-4 {
+            order: 1;
+        }
+    }
+}

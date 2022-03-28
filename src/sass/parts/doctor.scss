@@ -1,0 +1,41 @@
+
+.doctor {
+
+	.top-row {
+		@media all and (min-width: $widthMobile) {
+			display: flex;
+
+			.image-block {
+				flex: 0 0 400px;
+				margin-right: 40px;
+			}
+		}
+	}
+
+	.image-block {
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: $color3;
+		position: relative;
+
+		.image {
+			height: 325px;
+			background-size: cover;
+			background-position: top center;
+		}
+
+		.info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+	}
+
+
+	.doc-button-review {
+		@media all and (max-width: $widthMobile) {
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+
+.thumb-company {
+
+    .inner {
+        display: flex;
+        height: 100%;
+        padding: 5px;
+        position: relative;
+        border-radius: 8px;
+        background-color: $color3;
+    }
+
+    .image {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+
+        flex: 0 0 215px;
+        height: 230px;
+        border-radius: 8px;
+    }
+
+    .info {
+        padding: 15px 15px 15px 40px;
+        //overflow-x: hidden;
+    }
+
+    .title {
+        max-height: 80px;
+
+        @extend .font-color-1;
+        @extend .size-h3;
+    }
+
+
+    @media all and (max-width: $widthMobile) {
+        .inner {
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .img-m-wrap {
+            flex-basis: 100%;
+            text-align: center;
+            background-color: white;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .info {
+            padding: 20px 0 0 0;
+        }
+    }
+}

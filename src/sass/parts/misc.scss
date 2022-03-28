@@ -1,0 +1,257 @@
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.pos-abs-100 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.trans {
+    transition: all .3s;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media all and (max-width: $widthMobile) {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+.bg-color-light-gray {
+    background-color: $color3;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+
+$spm: (
+        '1': 5px,
+        '2': 10px,
+        '3': 15px,
+        '4': 20px,
+        '5': 25px,
+        '6': 30px,
+        '7': 35px,
+        '8': 40px,
+        '9': 45px,
+        '10': 50px
+);
+
+@each $spNumber, $spWeight in $spm {
+    .p-#{$spNumber} {
+        padding: $spWeight $spWeight !important;
+    }
+
+    .px-#{$spNumber} {
+        padding-left: $spWeight !important;
+        padding-right: $spWeight !important;
+    }
+
+    .py-#{$spNumber} {
+        padding-top: $spWeight !important;
+        padding-bottom: $spWeight !important;
+    }
+
+    .pt-#{$spNumber} {
+        padding-top: $spWeight !important;
+    }
+
+    .pb-#{$spNumber} {
+        padding-bottom: $spWeight !important;
+    }
+
+    .pl-#{$spNumber} {
+        padding-left: $spWeight !important;
+    }
+
+    .pr-#{$spNumber} {
+        padding-right: $spWeight !important;
+    }
+
+    .m-#{$spNumber} {
+        margin: $spWeight $spWeight !important;
+    }
+
+    .mx-#{$spNumber} {
+        margin-left: $spWeight !important;
+        margin-right: $spWeight !important;
+    }
+
+    .my-#{$spNumber} {
+        margin-top: $spWeight !important;
+        margin-bottom: $spWeight !important;
+    }
+
+    .mt-#{$spNumber} {
+        margin-top: $spWeight !important;
+    }
+
+    .mb-#{$spNumber} {
+        margin-bottom: $spWeight !important;
+    }
+
+    .ml-#{$spNumber} {
+        margin-left: $spWeight !important;
+    }
+
+    .mr-#{$spNumber} {
+        margin-right: $spWeight !important;
+    }
+}
+
+.zoom-enter-active {
+    animation: zoom .4s;
+}
+
+.zoom-leave-active {
+    animation: zoom .4s reverse;
+}
+
+.zoom-q-enter-active {
+    animation: zoom .2s ease-out;
+}
+
+.zoom-q-leave-active {
+    animation: zoom .2s ease-in reverse;
+}
+
+.fade-enter-active {
+    animation: fade .2s;
+}
+
+.fade-leave-active {
+    animation: fade .4s reverse;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.loader,
+.loader:after {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.loader {
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 3px solid rgba(0,0,0,.1);
+    border-right: 3px solid rgba(0,0,0,.1);
+    border-bottom: 3px solid rgba(0,0,0,.1);
+    border-left: 3px solid $color1;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,32 @@
+
+.nav-m {
+    a,span {
+        display: flex;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+
+        &:not(:last-child)::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-left: 7px;
+            transform: rotate(-90deg);
+            background-image: url('../images/icons/icon-arrow-down.png');
+            background-size: contain;
+            content: '';
+        }
+
+        &.active {
+            @extend .font-color-1;
+        }
+    }
+
+
+
+    a,span + a,span {
+        border-top: 1px dashed $color25;
+    }
+}

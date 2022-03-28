@@ -1,0 +1,62 @@
+
+.comments {
+    .inner {
+        display: none;
+    }
+
+    &.open .inner {
+        display: block;
+    }
+
+    > .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-basis: 100%;
+        }
+    }
+
+
+    @media all and (max-width: $widthMobile) {
+        > .top {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .button {
+                margin-top: 20px;
+            }
+
+            .left-top {
+                flex-wrap: wrap;
+
+                > * {
+                    flex-basis: 100%;
+                    text-align: center;
+                }
+            }
+
+            .collapse {
+                margin-top: 15px;
+            }
+
+            .left {
+                justify-content: center;
+                flex-basis: 100%;
+
+                > * {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}

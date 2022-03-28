@@ -1,0 +1,92 @@
+
+
+.company-locations {
+    position: relative;
+
+    .psevdo {
+        position: relative;
+        align-items: center;
+        border-radius: 25px;
+        padding: 15px 45px 8px 20px;
+        flex-basis: 100%;
+        background-color: white;
+        border: 1px solid $color2;
+        overflow-x: hidden;
+        cursor: pointer;
+
+        .arrow-down {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+        }
+    }
+
+    .popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        border: 1px solid $color2;
+        border-radius: 25px;
+        background-color: white;
+        padding: 15px 20px;
+        z-index: 10;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+
+        .inner {
+            padding-right: 25px;
+        }
+
+        &.open {
+            display: block;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/icon-cancel.png');
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .tax {
+        margin-bottom: 7px;
+        width: 100%;
+
+        &.active {
+            color: $color1;
+        }
+
+        @extend .pointer;
+    }
+
+    &.news {
+        .tax {
+            display: block;
+            text-align: center;
+
+            &::before {
+                content: initial;
+            }
+        }
+    }
+
+    &.companies {
+        .popup {
+            .inner {
+                column-gap: 20px;
+                column-count: 2;
+
+                @media all and (max-width: 440px) {
+                    column-count: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+
+
+.filter-tax-m {
+    position: relative;
+
+    .psevdo {
+        position: relative;
+        display: flex;
+        background-color: $color3;
+        align-items: center;
+        border-radius: 25px;
+        padding: 5px 5px 5px 20px;
+
+        .left {
+            color: $color2;
+            white-space: nowrap;
+            margin-right: 15px;
+        }
+
+        .right {
+            flex-basis: 100%;
+            border-radius: 25px;
+            background-color: white;
+            border: 1px solid $color1;
+            overflow-x: hidden;
+
+            div {
+                margin: 10px 42px 10px 20px;
+                white-space: nowrap;
+                overflow-x: hidden;
+            }
+        }
+
+        .arrow-down {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+        }
+    }
+
+    .popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        border: 1px solid $color1;
+        border-radius: 25px;
+        background-color: white;
+        padding: 15px 20px;
+        z-index: 10;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+
+        &.open {
+            display: block;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/icon-cancel-color.png');
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .tax {
+        margin-bottom: 7px;
+        width: 100%;
+
+        &.active {
+            color: $color1;
+        }
+
+        @extend .pointer;
+    }
+
+    &.news {
+        .tax {
+            display: block;
+            text-align: center;
+
+            &::before {
+                content: initial;
+            }
+        }
+    }
+
+    &.companies {
+        .popup {
+            .inner {
+                column-gap: 20px;
+                column-count: 2;
+
+                @media all and (max-width: 440px) {
+                    column-count: 1;
+                }
+            }
+        }
+    }
+}

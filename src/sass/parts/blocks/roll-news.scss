@@ -1,0 +1,20 @@
+
+
+.roll-one-news {
+    display: block;
+    padding: 15px 0;
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        @extend .size-sm;
+        @extend .font-color-2;
+    }
+
+    & + .roll-one-news {
+        border-top: 1px dashed $colorBorder;
+    }
+}

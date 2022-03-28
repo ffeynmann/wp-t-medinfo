@@ -1,0 +1,438 @@
+.pre-icon {
+    display: inline-flex;
+    align-items: center;
+
+    &.sm::before {
+        width: 18px;
+        height: 18px;
+    }
+
+    &.md::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.lg::before {
+        width: 32px;
+        height: 32px;
+    }
+
+    &.xl::before {
+        width: 40px;
+        height: 40px;
+    }
+
+    &.xxxl::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    &.no-margin::before {
+        margin-right: 0;
+    }
+
+    &.margin5::before {
+        margin-right: 5px;
+    }
+
+    &.hoverable {
+        @extend .trans;
+
+        &::before {
+            opacity: .8;
+
+            @extend .pointer;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    &.menu-sprite::before {
+        background-size: 508px 25px;
+    }
+
+    &.department-sprite::before {
+        background-size: 189px 258px;
+        background-image: url('../images/icons/icon-departments-3.png');
+    }
+
+    &::before {
+        display: block;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+        flex-shrink: 0;
+        content: '';
+    }
+
+    &.search-gray::before {
+        background-image: url('../images/icons/icon-search-gray.png');
+    }
+
+    &.tel::before {
+        background-image: url('../images/icons/icon-tel.png?2');
+    }
+
+    &.star-full::before {
+        background-image: url('../images/icons/icon-star-1.png');
+    }
+
+    &.tel-color::before {
+        background-image: url('../images/icons/icon-tel-color.png?2');
+    }
+
+    &.mail::before {
+        background-image: url('../images/icons/icon-mail.png');
+    }
+
+    &.fb::before {
+        background-image: url('../images/icons/icon-fb.png');
+    }
+
+    &.tm::before {
+        background-image: url('../images/icons/icon-tm.png');
+    }
+
+    &.vb::before {
+        background-image: url('../images/icons/icon-vb.png');
+    }
+
+    &.discussion::before {
+        background-image: url('../images/icons/icon-discussion.png');
+    }
+
+    &.discussion-2::before {
+        background-image: url('../images/icons/icon-discussion-2.png');
+    }
+
+    &.discussion-3::before {
+        background-image: url('../images/icons/icon-discussion-3.png');
+    }
+
+    &.chat::before {
+        background-image: url('../images/icons/icon-chat.png');
+    }
+
+    &.like {
+        &::before {
+            background-image: url('../images/icons/icon-like.png');
+        }
+
+        &.active::before {
+            background-image: url('../images/icons/icon-like-color.png');
+        }
+    }
+
+    &.dislike {
+        &::before {
+            background-image: url('../images/icons/icon-dislike.png');
+        }
+
+        &.active::before {
+            background-image: url('../images/icons/icon-dislike-color.png');
+        }
+    }
+
+    &.reply-to::before {
+        background-image: url('../images/icons/icon-reply-to.png');
+    }
+
+    &.arrow-down::before {
+        background-image: url('../images/icons/icon-arrow-down.png');
+    }
+
+    &.arrow-up::before {
+        background-image: url('../images/icons/icon-arrow-down.png');
+        transform: rotate(180deg);
+    }
+
+    &.arrow-down-color::before {
+        background-image: url('../images/icons/icon-arrow-down-color.png');
+    }
+
+    &.arrow-up-color::before {
+        background-image: url('../images/icons/icon-arrow-down-color.png');
+        transform: rotate(180deg);
+    }
+
+    &.arrow-top-right::before {
+        background-image: url('../images/icons/icon-arrow-top-right.png?2');
+    }
+
+    &.arrow-top-right-2::before {
+        background-image: url('../images/icons/icon-arrow-top-right-2.png?2');
+    }
+
+    &.arrow-back-color::before {
+        background-image: url('../images/icons/icon-arrow-back-color.png');
+    }
+
+    &.arrow-round-left::before {
+        background-image: url('../images/icons/icon-arrow-round-left.png');
+    }
+
+    &.arrow-round-right::before {
+        background-image: url('../images/icons/icon-arrow-round-right.png');
+    }
+
+    &.line-vertical::before {
+        background-image: url('../images/icons/icon-line-vertical.png');
+    }
+
+    &.eye::before {
+        background-image: url('../images/icons/icon-eye.png');
+    }
+
+    &.eye-white::before {
+        background-image: url('../images/icons/icon-eye-white.png');
+    }
+
+    &.clock::before {
+        background-image: url('../images/icons/icon-clock.png');
+    }
+
+    &.clock-white::before {
+        background-image: url('../images/icons/icon-clock-white.png');
+    }
+
+    &.author::before {
+        background-image: url('../images/icons/icon-author.png');
+    }
+
+    &.location::before {
+        background-image: url('../images/icons/icon-location.png');
+    }
+
+    &.globe::before {
+        background-image: url('../images/icons/icon-globe.png');
+    }
+
+    &.fire::before {
+        background-image: url('../images/icons/icon-fire.png');
+    }
+
+    &.fire-2::before {
+        background-image: url('../images/icons/icon-fire-2.png');
+    }
+
+    //&.cancel-color::before {
+    //    background-image: url('../images/icons/icon-cancel-color.png');
+    //}
+
+    &.reload {
+        &.active::before {
+            animation:spin 1s linear infinite;
+        }
+
+        &::before {
+            background-image: url('../images/icons/icon-reload.png');
+        }
+    }
+
+    &.lang {
+        &::before {
+            background-image: url('../images/icons/icon-lang-0.png');
+        }
+
+        &.active::before {
+            background-image: url('../images/icons/icon-lang-1.png');
+        }
+    }
+
+    &.menu-home {
+        &::before {
+            background-position: 0 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -6*44px 0;
+        }
+    }
+
+    &.menu-posts {
+        &::before {
+            background-position: -1*44px 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -7*44px 0;
+        }
+    }
+
+    &.menu-companies {
+        &::before {
+            background-position: -2*44px 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &.fixed::before {
+            background-position: -2*44px 0 !important;
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -8*44px 0;
+        }
+    }
+
+    &.menu-news {
+        &::before {
+            background-position: -3*44px 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -9*44px 0;
+        }
+    }
+
+    &.menu-knp {
+        &::before {
+            background-position: -4*44px 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &.fixed::before {
+            background-position: -4*44px 0 !important;
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -10*44px;
+        }
+    }
+
+    &.menu-doctor {
+        &::before {
+            background-position: -5*44px 0;
+            background-image: url('../images/icons/icons-menu-sprite.png?3');
+        }
+
+        &.fixed::before {
+            background-position: -5*44px 0 !important;
+        }
+
+        &:hover::before, &.active::before {
+            background-position: -11*44px;
+        }
+    }
+
+    //col1
+    &.allergologija::before {
+        background-position: 0 0;
+    }
+
+    &.analizy::before {
+        background-position: 0 (-(24px + 15px));
+    }
+
+    &.venerologija::before {
+        background-position: 0 2*(-(24px + 15px));
+    }
+
+    &.gastrojenterologija::before {
+        background-position: 0 3*(-(24px + 15px));
+    }
+
+    &.ginekologija::before {
+        background-position: 0 4*(-(24px + 15px));
+    }
+
+    &.urologija::before {
+        background-position: 0 5*(-(24px + 15px));
+    }
+
+    &.vertebrologija::before {
+        background-position: 0 6*(-(24px + 15px));
+    }
+
+    //col2
+    &.dermatologija::before {
+        background-position: (-(24px + 30px)) 0;
+    }
+
+    &.diagnostika::before {
+        background-position: (-(24px + 30px)) (-(24px + 15px));
+    }
+
+    &.dietologija::before {
+        background-position: (-(24px + 30px)) 2*(-(24px + 15px));
+    }
+
+    &.immunologija::before {
+        background-position: (-(24px + 30px)) 3*(-(24px + 15px));
+    }
+
+    &.kardiologija::before {
+        background-position: (-(24px + 30px)) 4*(-(24px + 15px));
+    }
+
+    &.terapija::before {
+        background-position: (-(24px + 30px)) 5*(-(24px + 15px));
+    }
+
+    &.reabilitaciya::before {
+        background-position: (-(24px + 30px)) 6*(-(24px + 15px));
+    }
+
+    //col3
+    &.nerologija::before {
+        background-position: 2*(-(24px + 30px)) 0;
+    }
+
+    &.ortopedija::before {
+        background-position: 2*(-(24px + 30px)) (-(24px + 15px));
+    }
+
+    &.oftalmologija::before {
+        background-position: 2*(-(24px + 30px)) 2*(-(24px + 15px));
+    }
+
+    &.pediatr::before {
+        background-position: 2*(-(24px + 30px)) 3*(-(24px + 15px));
+    }
+
+    &.proktologija::before {
+        background-position: 2*(-(24px + 30px)) 4*(-(24px + 15px));
+    }
+
+    &.jendokrinologija::before {
+        background-position: 2*(-(24px + 30px)) 5*(-(24px + 15px));
+    }
+
+    &.kosmetologija::before {
+        background-position: 2*(-(24px + 30px)) 6*(-(24px + 15px));
+    }
+
+    //col4
+    &.psihiatrija::before {
+        background-position: 3*(-(24px + 30px)) 0;
+    }
+
+    &.stomatologija::before {
+        background-position: 3*(-(24px + 30px)) (-(24px + 15px));
+    }
+
+    &.fizioterapija::before {
+        background-position: 3*(-(24px + 30px)) 2*(-(24px + 15px));
+    }
+
+    &.flebologija::before {
+        background-position: 3*(-(24px + 30px)) 3*(-(24px + 15px));
+    }
+
+    &.hirurgija::before {
+        background-position: 3*(-(24px + 30px)) 4*(-(24px + 15px));
+    }
+
+    &.gastro::before {
+        background-position: 3*(-(24px + 30px)) 5*(-(24px + 15px));
+    }
+
+    &.otolaringologija::before {
+        background-position: 3*(-(24px + 30px)) 6*(-(24px + 15px));
+    }
+}

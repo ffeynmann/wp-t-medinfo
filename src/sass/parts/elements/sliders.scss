@@ -1,0 +1,68 @@
+
+
+.slider {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &.big-post {
+        .swiper-pagination {
+            position: absolute;
+            left: 50% !important;
+            text-align: right;
+            right: 30px;
+            bottom: 30px;
+            transform: initial !important;
+            width: initial;
+
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                background-color: white;
+                border-radius: 4px;
+                opacity: 1;
+                margin: 0 4px;
+
+                @extend .trans;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 48px;
+                background-color: $color1;
+            }
+
+            @media all and (max-width: $widthMobile) {
+                left: 30px !important;
+                right: 30px;
+                text-align: center;
+                bottom: 10px;
+            }
+        }
+    }
+    
+    &.top-news {
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+
+            position: relative;
+            
+            .swiper-pagination {
+                width: auto;
+                bottom: initial;
+                position: relative;
+
+                .swiper-pagination-bullet {
+                    background-color: $color25;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: $color1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+.doctor-review {
+    padding: 20px 15px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,.05);
+
+    @media all and (min-width: $widthMobile) {
+        display: flex;
+
+        .left {
+            flex: 0 0 400px;
+        }
+
+        .right {
+            flex-basis: 100%;
+        }
+    }
+
+
+}

@@ -1,0 +1,46 @@
+
+
+.stattya {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    > .inner {
+        margin: 0 auto;
+        max-width: 1050px;
+        border: 2px solid $color1;
+        border-radius: 10px;
+
+        @media all and (min-width: $widthMobile) {
+            padding: 40px 50px;
+        }
+
+        @media all and (max-width: $widthMobile) {
+            padding: 20px 5px;
+        }
+    }
+
+    .info {
+        text-align: center;
+        color: $color2;
+
+        @extend .size-sm;
+    }
+
+
+    .image {
+        background-size: cover;
+        height: 380px;
+        border-radius: 8px;
+    }
+
+    .image,.stattya-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 840px;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

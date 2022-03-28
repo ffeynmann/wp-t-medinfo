@@ -1,0 +1,98 @@
+
+
+.grid {
+    &.cols4 {
+        .item {
+            flex: 0 0 25%;
+        }
+    }
+
+    &.cols3 {
+        .item {
+            flex: 0 0 33.33%;
+        }
+    }
+
+    &.cols2 {
+        .item {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @media all and (max-width: $widthMobile) {
+            .item {
+                flex: 0 0 100% !important;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &.cols1 {
+        .item {
+            flex-basis: 100%;
+        }
+    }
+
+    .item {
+        padding: 20px;
+    }
+
+    > .inner {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin: -20px;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .item {
+            padding: 10px;
+        }
+
+        >.inner {
+            margin: -10px;
+        }
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .item {
+            flex: 0 0 50% !important;
+        }
+    }
+
+    @media all and (max-width: $widthPhone) {
+        .item {
+            flex: 0 0 100% !important;
+        }
+    }
+}
+
+.columns-2 {
+    display: flex;
+    align-items: stretch;
+
+    .min {
+        flex: 0 0 300px;
+    }
+
+    .full {
+        flex-basis: 100%;
+        overflow: hidden;
+    }
+
+    @media all and (min-width: $widthMobile) {
+        flex-grow: 0;
+
+        &.m-r .min {
+            margin-right: 35px;
+        }
+
+        &.m-l .min {
+            margin-left: 35px;
+        }
+    }
+
+    @media all and (max-width: $widthMobile) {
+        flex-wrap: wrap;
+    }
+}

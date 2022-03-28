@@ -1,0 +1,52 @@
+
+
+$widthPhone: 500px;
+$widthMobile: 1100px;
+$widthMobileMenu: 1100px;
+
+$color0: #00254A; //text
+$color1: #FF7D39; //main
+$color2: #898B8F; //medium gray
+$color25: #E9E9E9; //medium gray
+$colorBorder: #f2f2f2;
+$color3: #FBFBFC; //light gray
+
+@import "parts/structure";
+@import "parts/elements";
+@import "parts/font";
+@import "parts/misc";
+@import "parts/header";
+@import "parts/nav-d";
+@import "parts/nav-m";
+@import "parts/blocks/top-row-d";
+@import "parts/blocks/top-row-m";
+@import "parts/blocks/bottom-row-d";
+@import "parts/blocks/bottom-row-m";
+@import "parts/grid";
+@import "parts/blocks/thumb-news";
+@import "parts/blocks/thumb-post";
+@import "parts/blocks/thumb-company";
+@import "parts/blocks/thumb-doctor";
+@import "parts/blocks/roll-news";
+@import "parts/blocks/slide-big-post";
+@import "parts/blocks/block-top-news";
+@import "parts/blocks/modal";
+@import "parts/blocks/form-review";
+@import "parts/blocks/form-doctor-review";
+@import "parts/post";
+@import "parts/stattya";
+@import "parts/company";
+@import "parts/doctor";
+@import "parts/copyright";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    color: $color0;
+    margin: 0;
+
+    @extend .size-base;
+}

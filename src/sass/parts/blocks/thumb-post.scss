@@ -1,0 +1,71 @@
+
+.thumb-post {
+
+    .inner {
+        display: flex;
+        padding: 20px;
+        position: relative;
+        box-shadow: 0 0 15px rgba(0,0,0,.05);
+        border-radius: 20px;
+    }
+
+    .link {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .image {
+        background-size: cover;
+        flex: 0 0 270px;
+        height: 290px;
+        border-radius: 20px;
+    }
+
+    .title {
+        max-height: 150px;
+
+        @extend .size-h3;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 100%;
+        padding: 55px 20px 0 60px;
+    }
+
+    .date-views {
+        display: flex;
+        justify-content: space-between;
+        color: $color2;
+
+        @extend .size-sm;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        .inner {
+            flex-wrap: wrap;
+        }
+
+        .image {
+            flex: 0 0 100%;
+        }
+
+        .title {
+            max-height: 200px;
+            padding-bottom: 30px;
+        }
+
+        .info {
+            order: 0;
+            padding: 45px 20px 20px 20px;
+        }
+
+        .image {
+            order: 1;
+        }
+    }
+
+}

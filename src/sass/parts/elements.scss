@@ -1,0 +1,221 @@
+
+@import "elements/gallery";
+@import "elements/pre-icon";
+@import "elements/language";
+@import "elements/button";
+@import "elements/breadcrumbs";
+@import "elements/stars";
+@import "elements/sliders";
+@import "elements/form";
+@import "elements/comment";
+@import "elements/doctor-review";
+@import "elements/comments";
+@import "elements/filter-tax-m";
+@import "elements/compeny-locations";
+//@import "elements/filter-tax-m-old";
+
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.tag:not(body):not(html) {
+    display: inline-block;
+    margin: 1px 5px 1px 0;
+    padding: 0 5px;
+    background-color: rgba(40, 170, 141, 0.49);
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+
+    @extend .size-sm;
+}
+
+.flag {
+    display: inline-block;
+    background-image: url('../images/bg-flag.svg');
+    background-size: 100% 100%;
+    padding: 12px 40px;
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid $color2;
+    color: $color2;
+    padding: 0 7px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 20px;
+
+    @extend .trans;
+
+    &:hover {
+        border-color: $color1;
+        color: $color1;
+    }
+
+    &:not(.no-pointer) {
+        @extend .pointer;
+    }
+
+    &:active,&.active {
+        border-color: $color1;
+        background-color: $color1;
+        color: white;
+    }
+}
+
+.doctors {
+    min-height: 500px;
+}
+
+.doctors-search-wrapper {
+    display: flex;
+    background-color: $color3;
+    border: 1px solid $color2;
+    border-radius: 24px;
+    max-width: 840px;
+    margin: 0 auto;
+
+    input[type=text] {
+        border: 0;
+        outline: 0;
+        flex-basis: 100%;
+        margin: 10px;
+        background-color: transparent;
+        width: 150px;
+
+        @extend .size-h3;
+    }
+
+    .button {
+        position: relative;
+        left: 2px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        min-width: initial;
+    }
+}
+
+.position {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 45px;
+    height: 52px;
+    padding-top: 6px;
+    background-image: url('../images/position-4.png');
+    background-size: cover;
+    text-align: center;
+    color: white;
+
+    &::before {
+        content: attr(data-position);
+    }
+
+    &[data-position="1"] {
+        background-image: url('../images/position-1.png')
+    }
+
+    &[data-position="2"] {
+        background-image: url('../images/position-2.png')
+    }
+
+    &[data-position="3"] {
+        background-image: url('../images/position-3.png')
+    }
+
+    @extend .size-h2;
+}
+
+div.home-banner {
+    background-size: 1920px 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 340px;
+}
+
+.x567 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-basis: 100%;
+
+    &.in-row {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media all and (max-width: $widthMobile) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    @media all and (max-width: $widthMobile) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.c432 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media all and (max-width: $widthMobile) {
+        flex-wrap: wrap;
+
+        .cities {
+            margin-top: 15px;
+            flex-basis: 100%;
+        }
+    }
+}
+
+.divider {
+    background-color: $color3;
+    height: 6px;
+}
+
+.departments-footer {
+    padding-top: 20px;
+    line-height: 20px;
+    background-color: $color3;
+
+
+    .inner {
+        column-gap: 20px;
+        column-count: 4;
+        max-width: 1010px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.scrolltotop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/scrolltotop.png');
+    background-size: contain;
+    opacity: .5;
+    cursor: pointer;
+
+    @extend .trans;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+

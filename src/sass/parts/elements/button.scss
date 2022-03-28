@@ -1,0 +1,93 @@
+
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    min-width: 180px;
+    max-width: 100%;
+    background-color: $color1;
+    border-radius: 25px;
+    color: white;
+
+    &[disabled] {
+        background-color: $color2;
+        pointer-events: none;
+    }
+
+    @extend .size-h4;
+    @extend .trans;
+    @extend .pointer;
+
+    &.filter {
+        padding-left: 8px;
+        padding-right: 8px;
+        min-width: initial;
+        background-color: white;
+        border: 1px solid $color2;
+        color: $color2;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        margin-right: 8px;
+
+        &:hover, &.active {
+            background-color: $color1;
+            border-color: $color1;
+            color: white;
+        }
+
+        &.sm {
+            height: 22px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+    }
+
+    &:hover {
+        background-color: #FFA53B
+    }
+
+    &:active {
+        background-color: #F26419;
+    }
+
+    &.ws-100 {
+        width: 100%;
+    }
+
+    &.ws-2 {
+        min-width: 240px;
+    }
+
+    &.ws-3 {
+        min-width: 270px;
+    }
+
+    &.ws-4 {
+        min-width: 400px;
+
+        @media all and (max-width: $widthMobile) {
+            min-width: 100%;
+        }
+    }
+
+    &.hs-2 {
+        height: 50px;
+    }
+
+    &.hs-3 {
+        height: 28px;
+    }
+
+    &.no-padding {
+        padding-left: initial;
+        padding-right: initial;
+    }
+}

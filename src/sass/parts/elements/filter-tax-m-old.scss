@@ -1,0 +1,54 @@
+
+
+.filter-tax-m {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 25px;
+    background-color: $color3;
+    color: $color2;
+
+    span {
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+
+    select {
+        position: relative;
+        flex-basis: 100%;
+        border: 1px solid $color1;
+        background-color: white;
+        border-radius: 25px;
+        padding: 10px 15px;
+        -webkit-appearance: none;
+
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 12px;
+        right: 30px;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/icon-arrow-down.png');
+        background-size: contain;
+        content: '';
+    }
+
+    @media all and (max-width: 374px) {
+        flex-wrap: wrap;
+
+        span {
+            flex-basis: 100%;
+            text-align:center;
+        }
+
+        select {
+            margin-top: 15px;
+        }
+    }
+}

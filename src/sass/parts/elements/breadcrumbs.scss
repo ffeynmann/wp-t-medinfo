@@ -1,0 +1,18 @@
+
+.breadcrumbs {
+    background-color: $color3;
+
+    @media all and (min-width: $widthMobile) {
+        border-bottom: 1px solid $colorBorder;
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+
+        > * + * {
+            margin-left: 2px;
+        }
+    }
+}
