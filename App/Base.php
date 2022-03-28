@@ -4,7 +4,7 @@ namespace App;
 
 class Base
 {
-    public static $version             = '28031613';
+    public static $version             = '28031713';
     public static $url                 = null;
     public static $options             = [];
     public static $menu                = null;
