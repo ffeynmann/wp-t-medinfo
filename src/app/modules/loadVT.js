@@ -30,5 +30,12 @@ export default {
                     });
                 }
             });
+    },
+    visitPost() {
+        document.querySelectorAll('[data-visit-post]').forEach(el => {
+            axios.post(vars.ajax, {action: 'sub', route: 'visit_post', 'id': el.dataset.visitPost});
+
+            console.log(el.dataset.visitPost);
+        });
     }
 }

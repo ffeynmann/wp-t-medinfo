@@ -2,9 +2,13 @@
 
 namespace App;
 
+
+
+use Faker\Factory;
+
 class Base
 {
-    public static $version             = '28031713';
+    public static $version             = '01041047';
     public static $url                 = null;
     public static $options             = [];
     public static $menu                = null;
@@ -18,7 +22,24 @@ class Base
         self::$siteUrl = get_bloginfo('url', 'display');
         self::setUrl();
 
+
         if(isset($_GET['test'])) {
+
+
+
+            $faker = Factory::create('ru_RU');
+
+            $samples = [];
+
+            for($i = 0; $i < 15; $i++) {
+//                $samples[] = $faker->;
+            }
+
+            Helper::dump($samples);
+
+//            header('H')
+
+
             include_once __DIR__ . '/Person.php';
             die();
 //            Helper::dump([1,2,3]);
@@ -245,76 +266,6 @@ class Base
         }
     }
 
-    public function transferOne($p)
-    {
-        $attachId = false;
-
-        $postImageUrl = Base::detectPostContentImage($p->full_story);
-        $postImageUrl && $attachId = Base::GenerateAttachmentImageId($postImageUrl);
-
-        $post = [
-            'post_date'    => $p->date,
-            'post_title'   => $p->title,
-            'post_content' => Base::transformPostContent($p->full_story),
-            'post_name'    => sprintf('%s-%s.html', $p->id, $p->alt_name),
-            'post_status'  => 'publish'
-        ];
-
-        //2 - новости
-        //3 - полезные статьи
-
-        if ($post_id = wp_insert_post($post)) {
-            wp_set_object_terms($post_id, intval($p->category), 'category');
-
-            $tags = array_map('\App\Main::mb_ucfirst', array_filter(array_map('trim', explode(',', $p->tags))));
-            $tags && wp_set_object_terms($post_id, $tags, 'post_tag');
-            $attachId && set_post_thumbnail($post_id, $attachId);
-
-            update_post_meta($post_id, 'alt_name', $p->alt_name);
-            update_post_meta($post_id, 'descr', $p->descr);
-            update_post_meta($post_id, 'keywords', $p->keywords);
-        }
-    }
-
-    public static function transformPostContent($content = '')
-    {
-        return preg_replace('/<!--TBegin.*<!--TEnd-->/mu', '', $content);
-    }
-
-    public static function detectPostContentImage($content = '')
-    {
-        preg_match('/(?:http.*?uploads.*?)(?:jpg|jpeg|gif|png)/m', $content, $matches);
-
-        return $matches ? $matches[0] : false;
-    }
-
-    public static function GenerateAttachmentImageId($image_url)
-    {
-        $upload_dir = wp_upload_dir();
-        $image_data = file_get_contents($image_url);
-        $filename   = basename($image_url);
-        if (wp_mkdir_p($upload_dir['path']))
-            $file = $upload_dir['path'] . '/' . $filename;
-        else
-            $file = $upload_dir['basedir'] . '/' . $filename;
-        file_put_contents($file, $image_data);
-
-        $wp_filetype = wp_check_filetype($filename, null);
-        $attachment  = array(
-            'post_mime_type' => $wp_filetype['type'],
-            'post_title'     => sanitize_file_name($filename),
-            'post_content'   => '',
-            'post_status'    => 'inherit'
-        );
-        $attach_id   = wp_insert_attachment($attachment, $file);
-        require_once(ABSPATH . 'wp-admin/includes/image.php');
-        $attach_data = wp_generate_attachment_metadata($attach_id, $file);
-        $res1        = wp_update_attachment_metadata($attach_id, $attach_data);
-//        $res2        = set_post_thumbnail($post_id, $attach_id);
-
-        return $attach_id;
-    }
-
     public static function mb_ucfirst($text)
     {
         return mb_strtoupper(mb_substr($text, 0, 1)) . mb_substr($text, 1);
@@ -359,7 +310,6 @@ class Base
 
     }
 
-
     public static function removeInsertedPostsAndAttachments()
     {
         $limit = 5000;
@@ -398,6 +348,76 @@ class Base
             'posts'  => count($posts),
             'delete' => $toDelete
         ]);
+    }
+
+    public function transferOne($p)
+    {
+        $attachId = false;
+
+        $postImageUrl = Base::detectPostContentImage($p->full_story);
+        $postImageUrl && $attachId = Base::GenerateAttachmentImageId($postImageUrl);
+
+        $post = [
+            'post_date'    => $p->date,
+            'post_title'   => $p->title,
+            'post_content' => Base::transformPostContent($p->full_story),
+            'post_name'    => sprintf('%s-%s.html', $p->id, $p->alt_name),
+            'post_status'  => 'publish'
+        ];
+
+        //2 - новости
+        //3 - полезные статьи
+
+        if ($post_id = wp_insert_post($post)) {
+            wp_set_object_terms($post_id, intval($p->category), 'category');
+
+            $tags = array_map('\App\Main::mb_ucfirst', array_filter(array_map('trim', explode(',', $p->tags))));
+            $tags && wp_set_object_terms($post_id, $tags, 'post_tag');
+            $attachId && set_post_thumbnail($post_id, $attachId);
+
+            update_post_meta($post_id, 'alt_name', $p->alt_name);
+            update_post_meta($post_id, 'descr', $p->descr);
+            update_post_meta($post_id, 'keywords', $p->keywords);
+        }
+    }
+
+    public static function detectPostContentImage($content = '')
+    {
+        preg_match('/(?:http.*?uploads.*?)(?:jpg|jpeg|gif|png)/m', $content, $matches);
+
+        return $matches ? $matches[0] : false;
+    }
+
+    public static function GenerateAttachmentImageId($image_url)
+    {
+        $upload_dir = wp_upload_dir();
+        $image_data = file_get_contents($image_url);
+        $filename   = basename($image_url);
+        if (wp_mkdir_p($upload_dir['path']))
+            $file = $upload_dir['path'] . '/' . $filename;
+        else
+            $file = $upload_dir['basedir'] . '/' . $filename;
+        file_put_contents($file, $image_data);
+
+        $wp_filetype = wp_check_filetype($filename, null);
+        $attachment  = array(
+            'post_mime_type' => $wp_filetype['type'],
+            'post_title'     => sanitize_file_name($filename),
+            'post_content'   => '',
+            'post_status'    => 'inherit'
+        );
+        $attach_id   = wp_insert_attachment($attachment, $file);
+        require_once(ABSPATH . 'wp-admin/includes/image.php');
+        $attach_data = wp_generate_attachment_metadata($attach_id, $file);
+        $res1        = wp_update_attachment_metadata($attach_id, $attach_data);
+//        $res2        = set_post_thumbnail($post_id, $attach_id);
+
+        return $attach_id;
+    }
+
+    public static function transformPostContent($content = '')
+    {
+        return preg_replace('/<!--TBegin.*<!--TEnd-->/mu', '', $content);
     }
 
     public function transformImagesToAcf()

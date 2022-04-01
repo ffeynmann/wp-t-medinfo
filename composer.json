@@ -1,0 +1,11 @@
+{
+  "name": "ff/medinfo",
+  "require": {
+    "fzaninotto/faker": "v1.9.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    }
+  }
+}

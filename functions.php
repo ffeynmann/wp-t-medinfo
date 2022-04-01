@@ -28,20 +28,22 @@ if (function_exists('add_theme_support')) {
     add_theme_support("post-thumbnails");
 }
 
-include(__DIR__ . '/App/Sitemp.php');
-include(__DIR__ . '/App/FacebookX.php');
-include(__DIR__ . '/App/Posts.php');
-include(__DIR__ . '/App/Bot.php');
-include(__DIR__ . '/App/Comments.php');
-include(__DIR__ . '/App/Ajax.php');
-include(__DIR__ . '/App/Language.php');
-include(__DIR__ . '/App/PostTypesTaxonomies.php');
-include(__DIR__ . '/App/Helper.php');
-include(__DIR__ . '/App/Company.php');
+include(__DIR__ . '/vendor/autoload.php');
+
+//include(__DIR__ . '/App/Sitemp.php');
+//include(__DIR__ . '/App/FacebookX.php');
+//include(__DIR__ . '/App/Posts.php');
+//include(__DIR__ . '/App/Bot.php');
+//include(__DIR__ . '/App/Comments.php');
+//include(__DIR__ . '/App/Ajax.php');
+//include(__DIR__ . '/App/Language.php');
+//include(__DIR__ . '/App/PostTypesTaxonomies.php');
+//include(__DIR__ . '/App/Helper.php');
+//include(__DIR__ . '/App/Company.php');
 //include(__DIR__ . '/App/Search.php');
-include(__DIR__ . '/App/SEO.php');
-include(__DIR__ . '/App/Captcha.php');
-include(__DIR__ . '/App/DoctorsHelper.php');
-include(__DIR__ . '/App/Base.php');
+//include(__DIR__ . '/App/SEO.php');
+//include(__DIR__ . '/App/Captcha.php');
+//include(__DIR__ . '/App/DoctorsHelper.php');
+//include(__DIR__ . '/App/Base.php');
 
 \App\Base::init();

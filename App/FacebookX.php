@@ -21,7 +21,7 @@ class FacebookX {
             Helper::dump(FacebookX::postLink('http://test.medinfo.zp.ua/news/v-zaporozhe-vse-bolshe-detej-popadajut-s-kovidom-v-reanimaciju/'), 1);
         }
 
-//        add_action('save_post', '\\App\FacebookX::savePost', 10, 3);
+        add_action('save_post', '\\App\FacebookX::savePost', 10, 3);
     }
 
     public static function savePost($postId, $post, $update)

@@ -77,5 +77,6 @@ document.querySelectorAll('[id^=gallery]').forEach(el => {
 document.querySelectorAll('.slider.big-post').forEach(el => new SliderBigPost(el));
 setTimeout(() => {document.querySelectorAll('.block-top-news').forEach(el => new SliderTopNews(el));}, 100);
 
+loadVT.visitPost();
 loadVT.views();
 loadVT.times();
