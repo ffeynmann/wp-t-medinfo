@@ -28,7 +28,7 @@ import '../sass/public.scss';
 
 import loadVT from './modules/loadVT'
 import Helpers from './modules/helpers'
-import {FakeVue, Modal, Company, ItemWrapper, SliderTopNews, SliderBigPost} from './modules/classes'
+import {FakeVue, Modal, Company, ItemWrapper, SliderTopNews, SliderBigPost, HeaderD, HeaderM} from './modules/classes'
 
 import axios from "axios";
 import Qs from 'qs';
@@ -60,6 +60,8 @@ document.querySelectorAll('.scrolltotop').forEach(el => {
 });
 
 document.querySelectorAll('.vue-company').forEach(el => new Company(el));
+document.querySelectorAll('.header-wrapper-d').forEach(el => new HeaderD(el));
+document.querySelectorAll('.header-wrapper-m').forEach(el => new HeaderM(el));
 
 document.querySelectorAll('.items-wrapper').forEach(el => {
     APP.itemWrappers.push(new ItemWrapper(el));

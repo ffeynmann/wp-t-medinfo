@@ -38,7 +38,6 @@
         <div class="social">
             <a href="<?= \App\Base::$options['link_fb'] ?>" target="_blank" class="pre-icon fb lg"></a>
             <a href="<?= \App\Base::$options['link_tm'] ?>" target="_blank" class="pre-icon tm lg"></a>
-<!--            <a href="--><?//= $app->options['link_vb'] ?><!--" target="_blank" class="pre-icon vb lg"></a>-->
         </div>
 
     </div>

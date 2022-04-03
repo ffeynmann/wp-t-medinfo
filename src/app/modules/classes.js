@@ -2,6 +2,7 @@ import Vue from "vue";
 import axios from "axios";
 import Swiper from "swiper";
 import Dotdotdot from "dotdotdot-js";
+import Helpers from "./helpers";
 
 export class FakeVue {
     static $index = 0
@@ -245,5 +246,51 @@ export class SliderBigPost {
             pagination: {el: ".swiper-pagination", clickable: true},
             autoplay: {delay: 5000}
         });
+    }
+}
+
+export class HeaderD {
+    constructor(el) {
+
+        return new Vue({
+            el,
+            name: 'Header D',
+            data: {
+                search_focused: false
+            }
+        })
+    }
+}
+
+export class HeaderM {
+    constructor(el) {
+
+        return new Vue({
+            el,
+            name: 'Header M',
+            data: {
+                menu_open: false,
+                search_input: '',
+                search_focused: false,
+            },
+            methods: {
+                close_search: function(){
+                    this.search_input = '';
+                    this.search_focused = 0;
+                }
+            },
+            watch: {
+                menu_open: function(state){
+                    if(state) {
+                        Helpers.scrollToTop.bind(null, 0);
+                        document.querySelector('header').classList.add('sticky');
+                    } else {
+                        document.querySelector('header').classList.remove('sticky');
+                    }
+
+                    // document.body.classList[state ? 'add' : 'remove']('nav-open');
+                }
+            }
+        })
     }
 }

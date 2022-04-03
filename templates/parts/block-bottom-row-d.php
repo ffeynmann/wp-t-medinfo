@@ -6,7 +6,7 @@
                 <a href="mailto:medinfo@gmail.com" class="pre-icon mail md"><?= \App\Base::$options['e_mail'] ?></a>
             </div>
             <a href="<?= \App\Base::$siteUrl ?>" class="logo">
-                <img width="215px" alt="logo" src="<?= \App\Base::$url ?>assets/images/logo.png">
+                <img width="215px" alt="logo" src="<?= \App\Base::$url ?>dist/images/logo.png?2">
             </a>
             <div class="xb6">
                 <a href="#" class="button mr-4 hs-2 ws-3" data-request-call><?= __('Обратная связь','def') ?></a>

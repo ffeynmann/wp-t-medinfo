@@ -2,13 +2,11 @@
 
 namespace App;
 
-
-
 use Faker\Factory;
 
 class Base
 {
-    public static $version             = '01041047';
+    public static $version             = '03041756';
     public static $url                 = null;
     public static $options             = [];
     public static $menu                = null;

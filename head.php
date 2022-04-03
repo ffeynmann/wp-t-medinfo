@@ -10,12 +10,6 @@
     <?php \App\Posts::ogImage() ?>
 <!--    <link rel="alternate" href="http://example.com/" hreflang="x-default" />-->
 
-
-<!--    <meta property="og:url"         content="--><?//= $_SERVER['REQUEST_URI'] ?><!--" />-->
-<!--    <meta property="og:type"        content="article" />-->
-<!--    <meta property="og:title"       content="--><?//= $app->seo->title(false) ?><!--" />-->
-<!--    <meta property="og:description" content="--><?//= $description ?><!--" />-->
-<!--    <meta property="og:image"       content="--><?//= $app->seo->image() ?><!--" />-->
     <?php wp_head() ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMY9611C49"></script>
