@@ -5,10 +5,22 @@
       <a class="class-h3 pre-icon menu-sprite menu-doctor md mt-3 fixed"
          :href="item.post_link"
          v-html="item.post_title"></a>
-      <div v-if="item.comment_post && item.comment_post.types.length"
-           v-for="type in item.comment_post.types"
-           v-html="type"
-      ></div>
+      <div class="mt-3"></div>
+      <div v-for="company in item.comment_post.companies">
+        <div class="pre-icon menu-sprite menu-companies md fixed">
+          {{ company.title }}
+        </div>
+      </div>
+      <div v-for="knp in item.comment_post.knps">
+        <div class="pre-icon menu-sprite menu-knp md fixed">
+          {{ knp.title }}
+        </div>
+      </div>
+
+<!--      <div v-if="item.comment_post && item.comment_post.types.length"-->
+<!--           v-for="type in item.comment_post.types"-->
+<!--           v-html="type"-->
+<!--      ></div>-->
       <div class="mt-3">
         <stars m_class="md" :level="item.stars" v-model="item.stars"></stars>
       </div>

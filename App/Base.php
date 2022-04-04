@@ -43,7 +43,7 @@ class Base
 //            Helper::dump([1,2,3]);
         }
 
-//        self::$version = rand(0, 1000000);
+        self::$version = rand(0, 1000000);
 
         Ajax::init();
         Posts::init();

@@ -1,15 +1,19 @@
 
 <script type="text/x-template" id="doctor-review">
     <div class="doctor-review mb-4">
-        <div class="left">
+        <div class="left">999
             <div class="font-size-h6 font-color-2"><?= __('Доктор','def') ?>:</div>
             <a class="class-h3 pre-icon menu-sprite menu-doctor md mt-3 fixed"
                 :href="item.post_link"
                  v-html="item.post_title"></a>
-            <div v-if="item.comment_post && item.comment_post.types.length"
-                 v-for="type in item.comment_post.types"
-                 v-html="type"
-            ></div>
+            <div v-for="company in comment_post.companies" v-text="company.title"></div>
+            <div v-for="knp in comment_post.companies" v-text="knp.title"></div>
+
+<!---->
+<!--            <div v-if="item.comment_post && item.comment_post.types.length"-->
+<!--                 v-for="type in item.comment_post.types"-->
+<!--                 v-html="type"-->
+<!--            ></div>-->
             <div class="mt-3">
                 <stars m_class="md" :level="item.stars" v-model="item.stars"></stars>
             </div>
