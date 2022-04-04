@@ -131,10 +131,6 @@ class Comments {
             $textPart4 .= sprintf("\n%s", $knp['title']);
         }
 
-        if(!empty($commentPost['company_type'])) {
-            $textPart4 = sprintf("\n%s", $commentPost['company_type']);
-        }
-
         $textPart5 = sprintf("\n%s:\n- %s",
             $commentCommentPost['name'],
             $commentCommentPost['text']
