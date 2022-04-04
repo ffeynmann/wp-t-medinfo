@@ -103,16 +103,6 @@ class Comments {
         $titleForTag = str_replace([' ', '-', '№'], '', mb_strtolower($commentPost['title']));
         $titleForTag = str_replace(['.', ','], '_', mb_strtolower($titleForTag));
 
-        if(get_post_type($commentPost['ID']) === 'doctor') {
-            $commentPost['title'] = sprintf('Врач: %s', $commentPost['title']);
-
-            if($commentPost && !empty($commentPost['types'])) {
-                foreach ($commentPost['types'] as $type) {
-                    $commentPost['title'] .= sprintf("\n%s", $type);
-                }
-            }
-        }
-
         $textPart1 = sprintf("%s\n%s\n#%s",
             $starsText,
             $commentPost['title'],
@@ -132,6 +122,15 @@ class Comments {
         }
 
         $textPart4 = '';
+
+        foreach ($commentPost['companies'] as $company) {
+            $textPart4 .= sprintf("\n%s", $company['title']);
+        }
+
+        foreach ($commentPost['knps'] as $knp) {
+            $textPart4 .= sprintf("\n%s", $knp['title']);
+        }
+
         if(!empty($commentPost['company_type'])) {
             $textPart4 = sprintf("\n%s", $commentPost['company_type']);
         }
