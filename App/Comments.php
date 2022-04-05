@@ -17,19 +17,23 @@ class Comments {
 
         add_action('wp_insert_comment', function($commentID, $comment){
             Company::updateRating($comment->comment_post_ID);
+            do_action('wp_ajax_wpfc_delete_cache');
         },99, 2);
 
         add_action('deleted_comment', function($commentID, $comment){
             Company::updateRating($comment->comment_post_ID);
+            do_action('wp_ajax_wpfc_delete_cache');
         }, 99, 2);
 
         add_action('edit_comment', function($commentID, $comment){
             Company::updateRating($comment->comment_post_ID);
+            do_action('wp_ajax_wpfc_delete_cache');
         }, 99, 2);
 
         add_action('wp_set_comment_status', function($commentID, $status){
             $comment = get_comment($commentID);
             Company::updateRating($comment->comment_post_ID);
+            do_action('wp_ajax_wpfc_delete_cache');
         }, 99, 2);
 
         add_action('add_meta_boxes', function(){
