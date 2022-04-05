@@ -6,7 +6,7 @@ use Faker\Factory;
 
 class Base
 {
-    public static $version             = '03041756';
+    public static $version             = '05040845';
     public static $url                 = null;
     public static $options             = [];
     public static $menu                = null;
@@ -43,7 +43,7 @@ class Base
 //            Helper::dump([1,2,3]);
         }
 
-        self::$version = rand(0, 1000000);
+//        self::$version = rand(0, 1000000);
 
         Ajax::init();
         Posts::init();

@@ -231,8 +231,8 @@ class Posts {
     {
         $gender       = get_field('gender', $post->ID);
         $image        = get_the_post_thumbnail_url($post, 'large');
-        $noPhotoMan   = \App\Base::$url . 'assets/images/noPhoto-man.png';
-        $noPhotoWoMan = \App\Base::$url . 'assets/images/noPhoto-woman.png';
+        $noPhotoMan   = \App\Base::$url . 'dist/images/noPhoto-man.png';
+        $noPhotoWoMan = \App\Base::$url . 'dist/images/noPhoto-woman.png';
 
         if (!$image) {
             $image = $noPhotoMan;
