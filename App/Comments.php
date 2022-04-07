@@ -128,11 +128,11 @@ class Comments {
         $textPart4 = '';
 
         foreach ($commentPost['companies'] as $company) {
-            $textPart4 .= sprintf("\n%s", $company['title']);
+            $textPart4 .= sprintf("\n<a href='%s'>%s</a>", $company['link'], $company['title']);
         }
 
         foreach ($commentPost['knps'] as $knp) {
-            $textPart4 .= sprintf("\n%s", $knp['title']);
+            $textPart4 .= sprintf("\n<a href='%s'>%s</a>", $knp['link'], $knp['title']);
         }
 
         $textPart5 = sprintf("\n%s:\n- %s",

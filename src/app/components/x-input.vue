@@ -5,7 +5,6 @@
            :disabled="disabled"
            @input="handleInput"
            :placeholder="placeholder"
-           ref="field"
     >
   </div>
 </template>
