@@ -88,7 +88,7 @@ class DoctorsHelper
             $ratings = $wpdb->get_results("select p.ID, pm.meta_value from $wpdb->posts as `p` 
                 join $wpdb->postmeta as `pm` on `pm`.`post_id` = `p`.`ID` 
                     and `pm`.`meta_key` = 'rating' and `pm`.`meta_value` > 0 
-                where `post_type` = 'doctor' order by `pm`.`meta_value` desc limit 10");
+                where `post_type` = 'doctor' order by `pm`.`meta_value` desc, p.`post_date` DESC limit 10");
         }
 
         $onlyID = array_column($ratings, 'ID');
