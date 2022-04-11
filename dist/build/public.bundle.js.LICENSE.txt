@@ -1,0 +1,17 @@
+/*!
+ *	dotdotdot JS 4.1.0
+ *
+ *	dotdotdot.frebsite.nl
+ *
+ *	Copyright (c) Fred Heusschen
+ *	www.frebsite.nl
+ *
+ *	License: CC-BY-NC-4.0
+ *	http://creativecommons.org/licenses/by-nc/4.0/
+ */
+
+/*!
+ * Vue.js v2.6.14
+ * (c) 2014-2021 Evan You
+ * Released under the MIT License.
+ */
